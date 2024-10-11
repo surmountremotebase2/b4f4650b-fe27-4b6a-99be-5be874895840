@@ -41,7 +41,7 @@ class TradingStrategy(Strategy):
         elif ema_ribbon[-1][-1] < ema_ribbon[0][-1] and rsi[-1] > 70:
             # Trend is downwards and stock is overbought
             allocation_dict["TQQQ"] = 0  # No investment in TQQQ
-            allocation_dict["SQQQ"] = 0.33  # Invest 1/3 in SQQQ, assuming 1:2 risk/reward
+            allocation_dict["SQQQ"] = 0.5  # Invest 1/3 in SQQQ, assuming 1:2 risk/reward
         
         # Log the decision for analysis
         log(f'Trading decision made at: {str(data["ohlcv"][-1]["TQQQ"]["date"])}')
